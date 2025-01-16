@@ -62,7 +62,7 @@ function playSound(stepDict, id) {
 
   if(stepDict[row].nodes[index] === true)
   {
-    console.log("here!")
+    //console.log("here!")
     new Audio(stepDict[row].sound).play()
     //console.log(new Audio(stepDict[row].sound).play())
   }
@@ -264,7 +264,7 @@ function Join() {
      
           }
       } else {
-          console.log("Element not found");
+          //console.log("Element not found");
       }
    var cast = parseFloat(window.getComputedStyle(document.getElementById(id)).opacity)
    
@@ -284,7 +284,7 @@ function Join() {
         setDynamicHeight(window.getComputedStyle(document.getElementById("grid")).width)
 
       } else {
-          console.log("Element not found");
+          //console.log("Element not found");
       }
 
     }, 100); // 100ms interval
@@ -306,7 +306,7 @@ function Join() {
       const docRef = await addDoc(collection(db, "signup"), docData);
 
       // Log success and document ID
-      console.log("Document added with ID: ", docRef.id); 
+      //console.log("Document added with ID: ", docRef.id); 
       setSubmitted(true);
       setSuccess(true);
       setPhone('')
@@ -337,7 +337,7 @@ function Join() {
             else {setMessage("close message")}
             }}>
 
-        {message}
+       <b></b> {message}
 
       
 
@@ -397,20 +397,22 @@ Atlanta, GA 30332</a></p>
       
           
       <br></br>
-      <input type="tel" value={phone} onChange={(e) => {
+      {/*<input type="tel" value={phone} onChange={(e) => {
         setPhone(e.target.value)
         
 
       }} placeholder={msg}/>
-      <br></br>
+      <br></br>*/}
       <button type="submit" className='submit' onClick={() => {
-        if(phone !== "")
+        window.open("https://groupme.com/join_group/105400885/VeHq1Apk", "_blank");
+       /* if(phone !== "")
         {
 addDocument(phone)
         }
-        
+        */
         }}>
-        {submitted ? success ? 'thank you!' : 'something went wrong' : 'submit'}
+        {/*submitted ? success ? 'thank you!' : 'something went wrong' : 'submit'*/}
+        <b>join M.E.A.T.</b>
      
         </button>
     </div>
