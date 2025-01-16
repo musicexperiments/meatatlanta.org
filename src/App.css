@@ -1,0 +1,309 @@
+body {
+  background-color: #282c34;
+  animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+
+}
+
+
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.test {
+  width: 100%;
+  height: auto; 
+
+  margin: 0 auto;
+  
+}
+
+
+.parent {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  height: 100vh;            /* Full height of the viewport */
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+
+
+
+
+.flexibleContainer {
+  width: 90%;
+}
+
+.App {
+
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  background-color: #282c34;
+}
+
+.App-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-template-rows: repeat(4, 1fr); /* 4 rows */
+  gap: 0.3rem; /* Space between buttons */
+  width: 90%; /* Width of the square */
+  height: auto; /* Height of the square */
+  position: relative;
+  animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+ 
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+body { font-family: “Arial Bold”, sans-serif; }
+
+input {
+  width: 90%;
+  height: auto;
+  font-size: medium;
+  text-align: center;
+  padding: 0.5rem;
+  box-sizing: border-box; 
+  outline: 0.2rem solid rgba(255, 255, 255, 1);;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+
+}
+
+.submit {
+  width: 91%;
+  height: auto;
+  font-size: medium;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 1) !important;
+  
+  color: #282c34;
+  border: none;
+  border-radius: 0.5rem;
+  box-sizing: border-box; 
+
+  
+
+}
+
+@keyframes flashBackground {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(97, 218, 251, 0.6); /* Flashing effect */
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.message {
+  width: 90%;
+  padding: 0.5rem;
+  height: auto;
+  font-size: medium;
+  text-align: center;
+  
+  box-sizing: border-box; 
+  outline: 0.2rem solid rgba(255, 255, 255, 1);;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  display: flex;             /* Enable flexbox */
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+
+  animation: flashBackground 2s infinite;  /* Apply animation */
+}
+
+
+.showMsg {
+  width: 90%;
+  height: auto;
+  font-size: medium;
+  text-align: center;
+  padding: 0.2rem;
+  box-sizing: border-box; 
+  outline: 0.2rem solid rgba(255, 255, 255, 1);;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+ /* Center vertically */
+
+animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+
+}
+
+
+a {
+  color: white;
+  padding: 0rem;
+  margin: 0;
+}
+
+input::placeholder {
+  color: white;
+  opacity: .6;
+}
+
+.type {
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.submit:hover {
+  width: 92%;
+  height: auto;
+  font-size: medium;
+  text-align: center;
+  padding: 0.5rem;
+
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color: #282c34;
+  border: none;
+  border-radius: 0.5rem;
+  
+
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.meat {
+  width: 100%;
+  opacity: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+
+  }
+}
+
+
+
+
+
+button {
+  border: none;
+  border-radius: 0.5rem; /* Slightly rounded corners */
+  background-color: rgba(97, 218, 251, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Positioning buttons based on your layout */
+button:nth-child(1) { grid-column: 1; grid-row: 1; } /* 0 */
+button:nth-child(2) { grid-column: 2; grid-row: 1; } /* 1 */
+button:nth-child(3) { grid-column: 3; grid-row: 1; } /* 1 */
+button:nth-child(4) { grid-column: 4; grid-row: 1; } /* 0 */
+button:nth-child(5) { grid-column: 1; grid-row: 2; } /* 1 */
+button:nth-child(6) { grid-column: 2; grid-row: 2; } /* 0 */
+button:nth-child(7) { grid-column: 3; grid-row: 2; } /* 0 */
+button:nth-child(8) { grid-column: 4; grid-row: 2; } /* 1 */
+button:nth-child(9) { grid-column: 1; grid-row: 3; } /* 1 */
+button:nth-child(10) { grid-column: 2; grid-row: 3; } /* 0 */
+button:nth-child(11) { grid-column: 3; grid-row: 3; } /* 0 */
+button:nth-child(12) { grid-column: 4; grid-row: 3; } /* 1 */
+button:nth-child(13) { grid-column: 1; grid-row: 4; } /* 0 */
+button:nth-child(14) { grid-column: 2; grid-row: 4; } /* 1 */
+button:nth-child(15) { grid-column: 3; grid-row: 4; } /* 1 */
+button:nth-child(16) { grid-column: 4; grid-row: 4; } /* 0 */
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+button {
+  display: block;
+
+}
+
+
+
+
+
+/* Tablets (481px to 768px) */
+@media (max-width: 500px) {
+  /* Styles for tablets */
+  .test {
+    width: 80%;
+ 
+    height: 90vh;
+  }
+}
+
+/* Laptops and Small Desktops (769px to 1200px) */
+@media (min-width: 501px) and (max-width: 769px) {
+  /* Styles for laptops and small desktops */
+  .test {
+    width: 50%;
+    
+
+  }
+}
+
+/* Laptops and Small Desktops (769px to 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  /* Styles for laptops and small desktops */
+  .test {
+    width: 30%;
+
+  }
+}
+
+/* Large Desktops (1201px and up) */
+@media (min-width: 1201px) {
+  /* Styles for large desktops */
+  .test {
+    width: 20%;
+
+  }
+}
