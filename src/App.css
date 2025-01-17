@@ -76,7 +76,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   position: absolute;      /* Absolute positioning */
   top: 0;                  /* Align at the top */
   left: 0;
-  z-index: 100;
+  z-index: 1;
   
 
  
@@ -101,7 +101,7 @@ html, body {margin: 0; height: 100%; overflow: hidden}
   position: absolute;      /* Absolute positioning */
   top: 0;                  /* Align at the top */
   left: 0;
-  z-index: 1;
+  z-index: 100;
 
 
 
