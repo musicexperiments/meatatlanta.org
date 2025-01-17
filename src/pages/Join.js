@@ -404,7 +404,7 @@ Atlanta, GA 30332</a></p>
 
       <button className='learnMore' onClick={() => {
         
-        window.open("https://www.instagram.com/meatatlanta/", "_blank")
+        window.open("https://www.instagram.com/p/DE75EasPLSA/?utm_source=ig_web_copy_link", "_blank")
       }}>Learn More</button>
     
       {/*<input type="tel" value={phone} onChange={(e) => {
