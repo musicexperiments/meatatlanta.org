@@ -125,8 +125,7 @@ function Join() {
   //reset timer function
   useEffect(() => {
 
-    if(!showMessage)
-    {
+  
       if(count !== 4) {
         
         // Array of letters to iterate over
@@ -198,7 +197,7 @@ function Join() {
     else {
       setCount(0);
     }
-  }
+  
    
   }, [count])
 
@@ -233,6 +232,7 @@ function Join() {
       };
     });
   }
+
   function turnOn(id) {
     var row = id[0]
     var index = parseInt(id.substring(1))
