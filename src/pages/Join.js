@@ -402,7 +402,10 @@ Atlanta, GA 30332</a></p>
           
       <br></br>
 
-      <button className='learnMore'>Learn More</button>
+      <button className='learnMore' onClick={() => {
+        
+        window.open("https://www.instagram.com/meatatlanta/", "_blank")
+      }}>Learn More</button>
     
       {/*<input type="tel" value={phone} onChange={(e) => {
         setPhone(e.target.value)
@@ -411,6 +414,7 @@ Atlanta, GA 30332</a></p>
       }} placeholder={msg}/>
       <br></br>*/}
       <button type="submit" className='submit' onClick={() => {
+
         window.open("https://groupme.com/join_group/105400885/VeHq1Apk", "_blank");
        /* if(phone !== "")
         {
