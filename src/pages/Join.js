@@ -114,6 +114,7 @@ function Join() {
   const [submitted, setSubmitted] = useState(false);
   const [success, setSuccess] = useState('');
   const [msg, setMsg] = useState('enter phone # to join M.E.A.T.')
+  const [firstTime, setFirstTime] = useState(true)
 
 
   
@@ -204,6 +205,8 @@ function Join() {
 
   //timer function
   useEffect(() => {
+
+    
     const intervalId = setInterval(() => {
       setCount(prevCount => prevCount + 1);
       
@@ -332,6 +335,7 @@ function Join() {
 
     <br></br>
           <button className='message' onClick={(e) => {
+            setFirstTime(false)
             setShowMessage(!showMessage);
             if(showMessage) {setMessage("new message!!!")}
             else {setMessage("close message")}
@@ -344,8 +348,8 @@ function Join() {
           </button>
           <br></br>
 
-      {!showMessage && 
-      <header className="App-header" id="grid" style={{height: dynamicHeight}}>
+    <div className='popStyle' style={{height: dynamicHeight}}>
+      <header className="App-header" id="grid" style={{height: dynamicHeight, opacity: showMessage ? 0 : 1}}>
 
 
         <button onClick={(e) => {turnOn(e.target.id)}} id="A0"></button>
@@ -372,11 +376,11 @@ function Join() {
 
 
       </header>
-      }
+      
 
       
 
-      {showMessage &&   <div className='showMsg' style={{height: dynamicHeight}}>
+     <div className='showMsg' style={{height: dynamicHeight, display: showMessage ? 'block' : 'none'}}>
         <p>Join us for our first M.E.A.T. Up!</p>
      <p >Thursday January 23rd at 4PM </p>
 
@@ -392,11 +396,14 @@ Atlanta, GA 30332</a></p>
 
 <p style={{fontStyle: 'italic'}}><span style={{fontWeight: 'bold'}}>OPEN TO ALL</span></p>
 
-</div>}
-   
+</div>
+</div>
       
           
       <br></br>
+
+      <button className='learnMore'>Learn More</button>
+    
       {/*<input type="tel" value={phone} onChange={(e) => {
         setPhone(e.target.value)
         
