@@ -99,7 +99,7 @@ function Vip() {
             {!correct && <div className="App" id="parentContainer">
                 <img src={meat} className='meat'></img>
                 <br></br>
-                <input type="tel" onChange={(e) => {setEntPass(e.target.value)}} onKeyDown={(e) => {
+                <input type="text" onChange={(e) => {setEntPass(e.target.value)}} onKeyDown={(e) => {
                     if(e.key === "Enter")
                     {
                         if(entPassword.toLowerCase() === "igotmeat")
