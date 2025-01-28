@@ -6,6 +6,8 @@ import { useThree, useFrame } from '@react-three/fiber';
 import { useGLTF } from '@react-three/drei';
 
 import { AnimationMixer } from 'three';
+import {create} from 'zustand';
+
 
 
 
