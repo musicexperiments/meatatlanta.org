@@ -2,18 +2,17 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Join from "./pages/Join";
+import Vip from "./pages/Vip";
+
 
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Join />}>
-        <Route index element={<Join />} />
-        <Route path="join" element={<Join />} />
-        <Route path="*" element={<Join />} />
-
-        </Route>
+      <Route path="/" element={<Join />} />
+      <Route path="/vip" element={<Vip />} />
+      
       </Routes>
     </BrowserRouter>
   );
