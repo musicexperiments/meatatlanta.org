@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei';
 
 import { AnimationMixer } from 'three';
 import {create} from 'zustand';
-
+import heart from '../3dmodels/heart2.glb'
 
 
 
@@ -19,7 +19,50 @@ function Special() {
   const raycaster = new THREE.Raycaster();
   const meshRef0 = useRef();
  
+  function Model({ meshReference, name, url, scale, position, rotation }) {
+    const { scene, animations } = useGLTF(url);
+    const mixer = useRef();
   
+    useEffect(() => {
+      if (scene) {
+        scene.traverse((child) => {
+          if (child.isMesh) {
+            child.name = name; // Assign your custom name to the mesh
+          }
+        });
+  
+        // Initialize the mixer with the loaded animations
+        if (animations && animations.length) {
+          mixer.current = new AnimationMixer(scene);
+          animations.forEach((clip) => {
+            const action = mixer.current.clipAction(clip);
+            action.play(); // Play all animations
+          });
+        }
+      }
+  
+      return () => {
+        // Clean up on unmount
+        if (mixer.current) {
+          mixer.current.stopAllAction();
+        }
+      };
+    }, [scene, animations, name]);
+  
+    useFrame((state) => {
+      // Update the mixer on every frame
+      if (mixer.current) {
+        const delta = state.clock.getDelta();
+        mixer.current.update(delta);
+      }
+    });
+  
+    return (
+      <mesh ref={meshReference} name={name} rotation={rotation} position={position}>
+        <primitive object={scene} scale={scale} />
+      </mesh>
+    );
+  }
 
 
 
@@ -50,12 +93,11 @@ function Special() {
         }}
       >
         <ambientLight intensity={1.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1} />
-        <mesh ref={meshRef0} position={[0, 0.5, 0]} scale={[0.5, 0.5, 0.5]}>
-      {/* Box geometry to create a cube */}
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="#4CC3D9" />
-    </mesh>
+        <directionalLight position={[5, 5, 5]} intensity={10} />
+        
+
+    <Model  url={heart} scale={1} position={[-0.3, 0, 0]}/>
+
           </ARMarker>
 
 
