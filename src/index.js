@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Join from "./pages/Join";
 import Vip from "./pages/Vip";
+import Special from './pages/Special';
+
+
 
 
 
@@ -12,6 +15,8 @@ export default function App() {
       <Routes>
       <Route path="/" element={<Join />} />
       <Route path="/vip" element={<Vip />} />
+      <Route path="/special" element={<Special />} />
+
       
       </Routes>
     </BrowserRouter>

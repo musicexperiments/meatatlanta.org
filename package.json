@@ -4,9 +4,12 @@
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
+    "@artcom/react-three-arjs": "^0.5.5",
+    "@react-three/drei": "^9.121.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "ar.js": "^2.0.8",
     "crypto-browserify": "^3.12.1",
     "firebase": "^11.2.0",
     "gapi-script": "^1.2.0",
@@ -19,6 +22,7 @@
     "react-scripts": "5.0.1",
     "save-dev": "^0.0.1-security",
     "stream-browserify": "^3.0.0",
+    "three": "^0.172.0",
     "util": "^0.12.5",
     "web-vitals": "^2.1.4"
   },
