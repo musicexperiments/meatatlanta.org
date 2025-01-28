@@ -126,7 +126,7 @@ function Vip() {
     
                 <img src={meat} className='meat'></img>
                 <br></br>
-                <input type="tel" onChange={(e) => {setName(e.target.value)}} onKeyDown={(e) => {
+                <input type="text" onChange={(e) => {setName(e.target.value)}} onKeyDown={(e) => {
                     if(e.key === "Enter")
                     {
                        setReadyToGen(true)
