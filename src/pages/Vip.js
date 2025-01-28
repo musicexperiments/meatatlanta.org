@@ -99,7 +99,24 @@ function Vip() {
             {!correct && <div className="App" id="parentContainer">
                 <img src={meat} className='meat'></img>
                 <br></br>
-                <input type="text" onChange={(e) => {setEntPass(e.target.value)}} onKeyDown={(e) => {
+
+                <div className='vipmsg'>
+        <p style={{fontWeight: 'bold'}}>VERY IMPORTANT PERSON <br></br><br></br>M.E.A.T. VALENTINE'S: AN 8D AUDIO-VISUAL EXPERIENCE</p>
+     <p >Friday February 7th at 9:17PM </p>
+
+     <p> <a target='_blank' href='https://maps.app.goo.gl/5dvCRrUXynafHMyi7'>
+      Factor's<br></br>
+453 Moreland Ave NE<br></br>
+</a></p>
+<p>You are invited as a V.I.P. to this event. <br></br><br></br>Please fill out this form to receive your ticket.</p>
+
+
+
+
+
+</div>
+<br></br>
+                 <input type="text" onChange={(e) => {setEntPass(e.target.value)}} onKeyDown={(e) => {
                     if(e.key === "Enter")
                     {
                         if(entPassword.toLowerCase() === "igotmeat")
@@ -159,6 +176,7 @@ function Vip() {
 </div>}
 
         </div>
+        <br></br>
     </div>
   );
 }

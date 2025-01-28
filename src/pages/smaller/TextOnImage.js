@@ -55,6 +55,10 @@ const TextOnImage = ({ text, number }) => {  // Now receiving text as a prop
 
   return (
     <div>
+        <br></br>
+        <button type="submit" className='submit' onClick={() => {window.open("https://www.instagram.com/meatatlanta/", "_blank")}}  style={{width: '100%'}}>
+                    <b>M.E.A.T. on Instagram</b>
+                </button>
       {/* Canvas to display the result */}
       <br></br>
       <canvas
@@ -68,10 +72,15 @@ const TextOnImage = ({ text, number }) => {  // Now receiving text as a prop
 
       {/* Button to download the image */}
 <br/>
-<br/>
-      <button type="submit" className='submit' onClick={handleDownload} style={{width: '100%'}}>
+
+
+     <p className='vipmsg2' style={{width: '100%', marginTop: '0.5rem'}}>congrats! show this at the door. </p>
+  
+      <button type="submit" className='submit' onClick={handleDownload} style={{width: '100%', marginTop: '1rem'}}>
                     <b>Download Pass</b>
+                    
                 </button>
+                <br></br>
     </div>
   );
 };
