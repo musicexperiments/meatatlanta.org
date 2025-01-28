@@ -96,7 +96,7 @@ function Special() {
         <directionalLight position={[5, 5, 5]} intensity={10} />
         
 
-    <Model  url={heart} scale={1} position={[-0.3, 0, 0]}/>
+    <Model  url={heart} scale={0.25} position={[0, 0, 0]}/>
 
           </ARMarker>
 
