@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
+    "@ar-js-org/ar.js": "^3.4.6",
     "@artcom/react-three-arjs": "^0.5.5",
     "@react-three/drei": "^9.121.4",
+    "@react-three/fiber": "^8.17.12",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
