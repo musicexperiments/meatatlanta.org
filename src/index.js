@@ -15,6 +15,8 @@ export default function App() {
       <Routes>
       <Route path="/" element={<Join />} />
       <Route path="/vip" element={<Vip />} />
+      <Route path="/join" element={<Join />} />
+
       <Route path="/special" element={<Special />} />
 
       

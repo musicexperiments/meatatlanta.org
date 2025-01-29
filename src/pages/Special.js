@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
 import {create} from 'zustand';
 import heart from '../3dmodels/heart_compressed.glb'
-import dLogo from '../3dmodels/logo.glb'
+import dLogo from '../3dmodels/trying.glb'
 
 
 
@@ -99,7 +99,7 @@ function Special() {
         
 
     <Model  url={heart} scale={0.25} position={[0, 0, 0]}/>
-    <Model  url={dLogo} scale={5} position={[0, 2, 0]}/>
+    <Model  url={dLogo} scale={5} position={[0, 1.8, 0]}/>
 
 
           </ARMarker>
