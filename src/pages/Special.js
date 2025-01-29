@@ -23,6 +23,7 @@ function Special() {
   const pointer = new THREE.Vector2();
   const raycaster = new THREE.Raycaster();
   const meshRef0 = useRef();
+  const meshRef1 = useRef();
 
   // Audio ref
   const audioRef = useRef(new Audio(backgroundMusic)); // Create audio element
@@ -55,7 +56,7 @@ function Special() {
   
   
  
-  function Model({ meshReference, name, url, scale, position, rotation }) {
+  function Model({ meshReference, name, url, scale, position, rotation, anim = false }) {
     const { scene, animations } = useGLTF(url);
     const mixer = useRef();
 
@@ -86,23 +87,33 @@ function Special() {
         }
       };
     }, [scene, animations, name]);
-  
-    useFrame((state) => {
-      // Update the mixer on every frame
-      if (mixer.current) {
-        const delta = state.clock.getDelta();
-        mixer.current.update(delta);
+
+
+    useFrame(() => {
+
+      if(anim === true) 
+      {
+        if (meshReference.current) {
+          meshReference.current.rotation.y += 0.01; // Spin speed
+      
+        }
       }
+      
     });
+    
   
     return (
       <mesh ref={meshReference} name={name} rotation={rotation} position={position}>
         <primitive object={scene} scale={scale} />
       </mesh>
     );
+
+    
   }
 
 
+
+  
 
   return (
     <div>
@@ -133,8 +144,8 @@ function Special() {
               <directionalLight position={[5, 5, 5]} intensity={10} />
               
 
-              <Model  url={heart} scale={0.25} position={[0, 0, 0]}/>
-              <Model  url={dLogo} scale={5} position={[0, 1.8, 0]}/>
+              <Model meshReference={meshRef0} anim={true}  url={heart} scale={0.25} position={[0, 0, 0]}/>
+              <Model meshReference={meshRef1} anim={true}  url={dLogo} scale={5} position={[0, 1.8, 0]}/>
 
 
             </ARMarker>
