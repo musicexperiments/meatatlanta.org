@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei';
 import { AnimationMixer } from 'three';
 import {create} from 'zustand';
 import heart from '../3dmodels/heart_compressed.glb'
-import dLogo from '../3dmodels/trying.glb'
+import dLogo from '../3dmodels/color.glb'
 
 
 
