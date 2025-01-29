@@ -147,7 +147,7 @@ function Special() {
     <div className='parent'>
      
         <div className='test'>
-             <div className="App" id="parentContainer" style={{height: '90vh'}}>
+             <div className="App" id="parentContainer" style={{height: '100vh'}}>
                 <img src={meat} className='meat'></img>
                 <br></br>
 
