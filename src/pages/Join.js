@@ -381,8 +381,8 @@ function Join() {
       
 
      <div className='showMsg' style={{height: dynamicHeight, display: showMessage ? 'block' : 'none'}}>
-        <p>Join us for our first M.E.A.T. Up!</p>
-     <p >Thursday January 23rd at 4PM </p>
+        <p>Join us for our weekly M.E.A.T. Up!</p>
+     <p >Every Thursday at 6PM </p>
 
      <p style={{fontStyle: 'italic'}}><span style={{fontWeight: 'bold'}}>Lab for Interaction & Immersion</span></p>
 
