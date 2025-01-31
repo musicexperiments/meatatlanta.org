@@ -1,7 +1,9 @@
 import logo from '../logo.svg';
 import '../App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import meat from '../log2.png'
+import backgroundMusic from '../music/vipAmbiance.mp3'; // Import your audio file
+
 
 import { getFirestore, getDocs, collection, addDoc } from "firebase/firestore";
 
@@ -46,6 +48,18 @@ function Vip() {
     const [readyToGen, setReadyToGen] = useState(false)
     const [name, setName] = useState("")
     const [num, setNum] = useState(null)
+
+    const audioRef = useRef(new Audio(backgroundMusic)); // Create audio element
+  const [audioReady, setAudioReady] = useState(false);
+
+  function handleAlertAndPlay () {
+ 
+    const audio = audioRef.current;
+    audio.loop = true;
+    audio.play().catch((error) => console.error('Error playing audio:', error)); // Play audio and catch errors
+    
+  };
+
 
     const checkConnection = async () => {
         // Get Firestore database instance
@@ -116,14 +130,22 @@ function Vip() {
 
 </div>
 <br></br>
+<div className="vipmsg3">
+                please turn your phone volume up
+                
+                </div>
+<br></br>
                  <input type="text" onChange={(e) => {setEntPass(e.target.value)}} onKeyDown={(e) => {
+
+                  
                     if(e.key === "Enter")
                     {
                         if(entPassword.toLowerCase() === "igotmeat")
                             {
                                 setCorrect(true)
+                                handleAlertAndPlay()
                             }
-
+                        
                     }
                 }}  placeholder="password"/>
                 <br></br>

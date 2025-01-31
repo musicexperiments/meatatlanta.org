@@ -162,7 +162,7 @@ function Special() {
                 <img src={meat} className='meat'></img>
                 <br></br>
                 <div className="vipmsg3">
-                turn your phone volume up
+                please turn your phone volume up
                 
                 </div>
                 <br></br>
