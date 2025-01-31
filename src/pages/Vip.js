@@ -142,8 +142,8 @@ function Vip() {
                     {
                         if(entPassword.toLowerCase() === "igotmeat")
                             {
-                                setCorrect(true)
                                 handleAlertAndPlay()
+                                setCorrect(true)
                             }
                         
                     }
