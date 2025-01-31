@@ -161,8 +161,12 @@ function Special() {
              <div className="App" id="parentContainer" style={{height: '85vh'}}>
                 <img src={meat} className='meat'></img>
                 <br></br>
-
-                <button type="submit" className='submit' onClick={() => {
+                <div className="vipmsg3">
+                turn your phone volume up
+                
+                </div>
+                <br></br>
+                <button type="submit" className='specialSubmit' onClick={() => {
                    setAudioReady(true);
                    handleAlertAndPlay();
                     }}>
