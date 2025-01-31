@@ -152,6 +152,7 @@ function Vip() {
                 <button type="submit" className='submit' onClick={() => {
                     if(entPassword.toLowerCase() === "igotmeat")
                     {
+                       handleAlertAndPlay()
                         setCorrect(true)
                     }
 
