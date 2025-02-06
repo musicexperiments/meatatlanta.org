@@ -100,7 +100,9 @@ function Vip() {
       
 
     useEffect(()=> {
-        checkConnection();
+      alert("The VIP ticket page is now closed. Redirecting you to the general admission link!")
+      window.location.href = "https://www.eventbrite.com/e/meat-valentines-an-8d-audio-visual-experience-tickets-1209336641449"
+        //checkConnection();
     }, [])
     
 
@@ -110,6 +112,7 @@ function Vip() {
     <div className='parent'>
      
         <div className='test'>
+          {/*
             {!correct && <div className="App" id="parentContainer">
                 <img src={meat} className='meat'></img>
                 <br></br>
@@ -196,7 +199,7 @@ function Vip() {
    
 
 
-</div>}
+</div>}*/}
 
         </div>
         <br></br>
